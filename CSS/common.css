@@ -1,0 +1,157 @@
+:root {
+    --primary: #ECEBE4; /* #00868B;  1b2845 */
+    --secondary: rgba(10, 10, 10, 1);
+    --tertiary: #05a8aa;
+
+    --main-font: 'Righteous', cursive;
+    --secondary-font: 'Inria Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--secondary);
+}
+
+.no_scroll::-webkit-scrollbar {
+    width: 0; !important;
+}
+
+/* Width */
+body::-webkit-scrollbar {
+    width: 7px;
+    background: var(--secondary);
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #dfe0e2;
+}
+
+/* NAV MENU */
+
+.container {
+
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    position: fixed;
+
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary);
+}
+
+.container {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-container {
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.nav-container * {
+    display: inline;
+    vertical-align: middle;
+}
+
+.nav-container a {
+    font-size: 21px;
+    text-decoration: none;
+    color: var(--primary);
+    font-family: var(--main-font);
+    text-shadow: 0 0 2px #000000, 0 0 2px #5c5c5c;
+}
+
+#name {
+    font-size: 35px;
+}
+
+.main-navigation {
+    margin-left: 15vw;
+    vertical-align: middle;
+}
+
+.menu-item {
+    padding-left: 1%;
+    padding-right: 1%;
+    display: inline-block;
+}
+
+.lang_div {
+    text-align: center;
+    color: var(--primary);
+}
+
+.lang_div:hover .change_lang {
+    display: block;
+    padding-top: 0.5vh;
+    text-align: center;
+    font-size: 15px; !important;
+}
+
+.drop_lang {
+    padding: 0;
+    border: none;
+    color: var(--primary);
+    font-size: 15px; !important;
+    background-color: transparent;
+    font-family: var(--main-font);
+    text-shadow: 0 0 2px #000000, 0 0 2px #5c5c5c;
+}
+
+.change_lang {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    font-size: 15px; !important;
+}
+
+#content {
+    min-height: 100vh;
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: var(--secondary);
+}
+
+.foot-navigation {
+    margin-right: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.foot-navigation a {
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--primary);
+    font-family: var(--main-font);
+}
+
+.foot-navigation li {
+    display: inline-block;
+}
+
+.footer-li {
+    padding-right: 1vw;
+    margin-bottom: 0.5vh;
+}
+
+#copyright {
+    right: 2vw;
+    position: absolute;
+}
