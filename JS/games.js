@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    let timer = null;
     let expand = false;
     let galleryIndex = 1;
     $(".game-content").hide();
@@ -102,7 +103,7 @@ $(document).ready(function() {
             gallery += '<div style="text-align: center" class="game-dot-div">';
 
             for (let j = 1; j < galleries[n_game].length + 1; j++) {
-                gallery += '<span class="game-dot" onClick="changeImage(' + j + ')"></span>';
+                gallery += '<span class="game-dot" data-dot-n="' + j + '"></span>';
             }
             gallery += '</div></div>';
 
@@ -112,13 +113,21 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on('click', '.game-dot', function(){
+       changeImage($(this).data("dot-n"));
+    });
+
     function plusImage(n) {
         changeImage(galleryIndex += n);
     }
 
     function changeImage(n) {
+
         let i;
         galleryIndex = n;
+        clearInterval(timer);
+        timer = setInterval(function(){plusImage(1);}, 5000);
+
         const dots = document.getElementsByClassName("game-dot");
         const images = document.getElementsByClassName("game-gallery-div");
 
@@ -137,6 +146,6 @@ $(document).ready(function() {
         dots[galleryIndex - 1].className += " active";
     }
 
-    setInterval(function(){plusImage(1);}, 5000);
+    timer = setInterval(function(){plusImage(1);}, 5000);
 
 });
