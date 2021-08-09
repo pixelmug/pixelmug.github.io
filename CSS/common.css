@@ -112,11 +112,19 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 0 0 2px #000000, 0 0 2px #5c5c5c;
 }
 
+.drop_lang:hover {
+    cursor: pointer;
+}
+
 .change_lang {
     z-index: 1;
     display: none;
     position: absolute;
     font-size: 15px; !important;
+}
+
+.change_lang:hover {
+    cursor: pointer;
 }
 
 #content {
