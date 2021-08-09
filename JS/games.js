@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
     let expand = false;
+    let galleryIndex = 1;
     $(".game-content").hide();
 
+    // Hover expand
     $(".game").hover(function () {
 
         if (!expand) {
@@ -27,6 +29,7 @@ $(document).ready(function() {
 
     });
 
+    // Focus on game
     $(".game").click(function () {
 
         if (!expand) {
@@ -35,7 +38,6 @@ $(document).ready(function() {
             $(".game-videos").hide();
         }
 
-        expand = true;
         $('#close_game').show();
         $(".game-preview").hide();
         $(this).children(".game-content").show();
@@ -65,5 +67,76 @@ $(document).ready(function() {
         $(this).parents(".tabs").children("div").not(".tabs-div").hide();
         $(this).parents(".tabs").children(".game-images").show();
     });
+
+    // Gallery management
+    let galleries = [
+        ["test3.jpg", "test4.jpg", "test4.jpg", "test3.jpg", "test4.jpg"],
+        ["test3.jpg", "test4.jpg", "test4.jpg"],
+        ["test3.jpg", "test4.jpg", "test4.jpg", "test3.jpg", "test4.jpg", "test4.jpg"]
+    ];
+
+    $(".game").click(function() {
+
+        if(!expand) {
+            let n_game;
+            expand = true;
+            switch ($(this).attr('id')) {
+                case "game-1":
+                    n_game = 0;
+                    break;
+                case "game-2":
+                    n_game = 1;
+                    break;
+                case "game-3":
+                    n_game = 2;
+                    break;
+            }
+
+            let gallery = '<div class="game-gallery">\n';
+            for (let i = 0; i < galleries[n_game].length; i++) {
+                gallery += '<div class="game-gallery-div fade">\n' +
+                    '<img class="game-gallery-image" src="Images/' + galleries[n_game][i] + '" alt="gallery-img">\n' +
+                    '</div>';
+            }
+
+            gallery += '<div style="text-align: center" class="game-dot-div">';
+
+            for (let j = 1; j < galleries[n_game].length + 1; j++) {
+                gallery += '<span class="game-dot" onClick="changeImage(' + j + ')"></span>';
+            }
+            gallery += '</div></div>';
+
+            $(".game-gallery").remove();
+            $(this).children(".game-content").children(".tabs").children(".game-images").append(gallery);
+            changeImage(1);
+        }
+    });
+
+    function plusImage(n) {
+        changeImage(galleryIndex += n);
+    }
+
+    function changeImage(n) {
+        let i;
+        galleryIndex = n;
+        const dots = document.getElementsByClassName("game-dot");
+        const images = document.getElementsByClassName("game-gallery-div");
+
+        if (n > images.length) {galleryIndex = 1}
+        if (n < 1) {galleryIndex = images.length}
+
+        for (i = 0; i < images.length; i++) {
+            images[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        images[galleryIndex - 1].style.display = "block";
+        dots[galleryIndex - 1].className += " active";
+    }
+
+    setInterval(function(){plusImage(1);}, 5000);
 
 });
