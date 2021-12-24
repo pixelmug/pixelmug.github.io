@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 0 0 2px #000000, 0 0 2px #5c5c5c;
 }
 
-#name {
+.name {
     font-size: 35px;
 }
 

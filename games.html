@@ -31,51 +31,14 @@
 <body class="no_scroll">
 <div id="page" class="site">
 
-    <header id="siteheader" class="site-header">
-        <div class="container transparent">
-            <div class="nav-container">
-                <a href="index.html" rel="home">
-                    <img class="large-logo" src="Images/logo-large.png" alt="logo">
-                    <span id="name">Pixelmug</span>
-                </a>
-                <nav id="site-navigation" class="main-navigation">
-                    <ul id="primary-menu" class="menu">
-                        <li id="menu-1" class="menu-item">
-                            <a class="en" href="about.html">About</a>
-                            <a class="it" href="about.html?lang=it">Su Di Noi</a>
-                        </li>
-                        <li id="menu-2" class="menu-item">
-                            <a class="en" href="games.html">Games</a>
-                            <a class="it" href="games.html?lang=it">Giochi</a>
-                        </li>
-                        <li id="menu-3" class="menu-item">
-                            <a class="en" href="contacts.html">Contacts</a>
-                            <a class="it" href="contacts.html?lang=it">Contatti</a>
-                        </li>
-
-                        <li class="menu-item menu-lang">
-                            <div class="lang_div">
-                                <div id="en-div" class="lang_div">
-                                    <button class="to-en drop_lang">EN</button>
-                                    <a class="to-it change_lang">IT</a>
-                                </div>
-                                <div id="it-div" class="lang_div">
-                                    <button class="to-it drop_lang">IT</button>
-                                    <a class="to-en change_lang">EN</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <div id="content">
         <span class="material-icons" id="close_game">close</span>
-        <div class="game" id="game-1">
+        <div class="game soon" id="game-1">
             <div class="filter darken game-preview">
-                <h1>COMING SOON</h1>
+                <h1 class="en">COMING SOON</h1>
+                <h1 class="it">IN ARRIVO</h1>
                 <span class="material-icons" id="expand-game-1">expand_more</span>
             </div>
             <div class="game-content">
@@ -120,31 +83,30 @@
         </div>
         <div class="game" id="game-2">
             <div class="filter darken game-preview">
-                <h1>COMING SOON</h1>
+                <h1>DEMO: NEW EARTH</h1>
                 <span class="material-icons" id="expand-game-2">expand_more</span>
             </div>
             <div class="game-content">
                 <div class="tabs">
                     <div class="first-impression">
-                        <h1 class="en">COMING SOON</h1>
-                        <h1 class="it">COMING SOON</h1>
+                        <h1 class="en">DEMO: NEW EARTH</h1>
+                        <h1 class="it">DEMO: NEW EARTH</h1>
                         <p class="en">
-                            Ut imperdiet diam purus, et semper leo laoreet eget.
-                            Nullam ultrices tellus velit, eget lacinia libero molestie in.
-                            Maecenas a justo risus. Morbi tincidunt malesuada velit eu accumsan.
-                            In pharetra augue ut dui imperdiet, vitae aliquet tortor sodales.
-                            Nunc condimentum enim dui, a suscipit turpis convallis non.
-                            Praesent facilisis, eros et vulputate interdum,
-                            tellus libero cursus mi, ac pharetra metus sapien at est.
+                            Our first prototype consists in a local multiplayer shooter, featuring 2 vs 2 teams engaged
+                            in time-limited capture the flag matches. The game is set in a 2D, platform-based arena
+                            and winning is based on how long the flag is held by each team.
+                            <br><br>
+                            The backstory revolves around the collapse of society and the clash between a highly
+                            advanced civilization and a magical, natural-based tribe.
                         </p>
                         <p class="it">
-                            Ut imperdiet diam purus, et semper leo laoreet eget.
-                            Nullam ultrices tellus velit, eget lacinia libero molestie in.
-                            Maecenas a justo risus. Morbi tincidunt malesuada velit eu accumsan.
-                            In pharetra augue ut dui imperdiet, vitae aliquet tortor sodales.
-                            Nunc condimentum enim dui, a suscipit turpis convallis non.
-                            Praesent facilisis, eros et vulputate interdum,
-                            tellus libero cursus mi, ac pharetra metus sapien at est.
+                            Il nostro primo prototipo consiste in uno sparatutto a multiplayer locale,
+                            con squadre 2 contro 2 che si sfidano in partite ruba bandiera in un tempo limitato.
+                            Il gioco è ambientato in un'arena 2D basata a piattaforme,
+                            e la vittoria si basa su quanto a lungo la bandiera è tenuta da ciascuna squadra.
+                            <br><br>
+                            La storia ruota attorno al crollo della società e allo scontro tra una civiltà
+                            altamente avanzata e una tribù magica che basa la sua vita nella venerazione della natura.
                         </p>
                     </div>
                     <div class="game-images">
@@ -163,9 +125,10 @@
                 </div>
             </div>
         </div>
-        <div class="game" id="game-3">
+        <div class="game soon" id="game-3">
             <div class="filter darken game-preview">
-                <h1>COMING SOON</h1>
+                <h1 class="en">COMING SOON</h1>
+                <h1 class="it">IN ARRIVO</h1>
                 <span class="material-icons" id="expand-game-3">expand_more</span>
             </div>
             <div class="game-content">
@@ -210,30 +173,10 @@
         </div>
     </div>
 
-    <div id="footer">
-        <nav id="footer-menu-1" class="foot-navigation">
-            <ul class="footer-ul">
-                <li class="footer-li">
-                    <a class="en" href="" target="_blank">Twitter</a>
-                    <a class="it" href="" target="_blank">Twitter</a>
-                </li>
-                <li class="footer-li">
-                    <a class="en" href="https://www.instagram.com/pixelmug_official/" target="_blank">Instagram</a>
-                    <a class="it" href="https://www.instagram.com/pixelmug_official/" target="_blank">Instagram</a>
-                </li>
-                <li class="footer-li">
-                    <a class="en" href="contacts.html">Contacts</a>
-                    <a class="it" href="contacts.html">Contatti</a>
-                </li>
-                <li id="copyright" class="footer-li">
-                    <a>Pixelmug &#169; 2021</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <div id="footer"></div>
 
 </div>
-    <script src="JS/common.js"></script>
-    <script src="JS/games.js"></script>
+<script src="JS/common.js"></script>
+<script src="JS/games.js"></script>
 </body>
 </html>

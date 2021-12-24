@@ -24,6 +24,7 @@ $(document).ready(function() {
 
             $(this).css({"border-width": "5px"});
             $(".game").not(this).css({"border-width": "5px"});
+            changeLanguage(choice);
         }
 
     }, function () {
@@ -33,21 +34,25 @@ $(document).ready(function() {
     // Focus on game
     $(".game").click(function () {
 
-        if (!expand) {
-            $(this).children(".game-content").children(".tabs").children(".first-impression").show();
-            $(".game-images").hide();
-            $(".game-videos").hide();
+        if (!$(this).hasClass("soon")) {
+
+            if (!expand) {
+                $(this).children(".game-content").children(".tabs").children(".first-impression").show();
+                $(".game-images").hide();
+                $(".game-videos").hide();
+            }
+
+            $('#close_game').show();
+            $(".game-preview").hide();
+            $(this).children(".game-content").show();
+
+            $(".game").css({"border-width": "0px"});
+            $(this).stop().animate({width: "99.99%"}, 750);
+            $(".game").not(this).stop().animate({width: "0%"}, 650);
+
+            $('.game').css({"cursor": "default"});
+            changeLanguage(choice);
         }
-
-        $('#close_game').show();
-        $(".game-preview").hide();
-        $(this).children(".game-content").show();
-
-        $(".game").css({"border-width": "0px"});
-        $(this).stop().animate({width: "99.99%"}, 750);
-        $(".game").not(this).stop().animate({width: "0%"}, 650);
-
-        $('.game').css({"cursor" : "default"});
     });
 
     $("body").on('click', '#close_game', function () {
@@ -71,14 +76,14 @@ $(document).ready(function() {
 
     // Gallery management
     let galleries = [
-        ["test3.jpg", "test4.jpg", "test4.jpg", "test3.jpg", "test4.jpg"],
+        ["img4.png", "img6.png", "img3.jpg", "img7.jpg"],
         ["test3.jpg", "test4.jpg", "test4.jpg"],
         ["test3.jpg", "test4.jpg", "test4.jpg", "test3.jpg", "test4.jpg", "test4.jpg"]
     ];
 
     $(".game").click(function() {
 
-        if(!expand) {
+        if(!expand && !$(this).hasClass("soon")) {
             let n_game;
             expand = true;
             switch ($(this).attr('id')) {
@@ -96,7 +101,7 @@ $(document).ready(function() {
             let gallery = '<div class="game-gallery">\n';
             for (let i = 0; i < galleries[n_game].length; i++) {
                 gallery += '<div class="game-gallery-div fade">\n' +
-                    '<img class="game-gallery-image" src="Images/' + galleries[n_game][i] + '" alt="gallery-img">\n' +
+                    '<img class="game-gallery-image" src="Images/Projects/' + galleries[n_game][i] + '" alt="gallery-img">\n' +
                     '</div>';
             }
 

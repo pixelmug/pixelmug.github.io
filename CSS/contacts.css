@@ -62,8 +62,9 @@
     background-image: url("../Images/instagram.png");
 }
 
-#twitter {
-    background-image: url("../Images/twitter.png");
+#linkedin {
+    padding: 2vh 2vh 0 2vh;
+    background-image: url("../Images/linkedin.png");
 }
 
 .social-li a{

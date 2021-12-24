@@ -1,37 +1,49 @@
-$(document).ready(function () {
+let choice = "en";
 
-    changeLanguage("en");
-    function changeLanguage(lang) {
-        if (lang === "it") {
-            $(".en").hide();
-            $(".it").show();
-            $("#it-div").show()
-            $("#en-div").hide()
-        } else {
-            $(".it").hide();
-            $(".en").show();
-            $("#en-div").show();
-            $("#it-div").hide();
-        }
+function changeLanguage(lang) {
+    if (lang === "it") {
+        $(".en").hide();
+        $(".it").show();
+        $("#it-div").show();
+        $("#en-div").hide();
+    } else {
+        $(".it").hide();
+        $(".en").show();
+        $("#en-div").show();
+        $("#it-div").hide();
     }
+}
+
+
+$(document).ready(function () {
 
     // LANGUAGE
     const urlParams = new URLSearchParams(window.location.search);
     const language = urlParams.get('lang');
     switch (language) {
         case "en":
-            changeLanguage(language);
+            choice = "en";
+            changeLanguage(choice);
             break;
         case "it":
-            changeLanguage(language);
+            choice = "it";
+            changeLanguage(choice);
             break;
         default:
-            changeLanguage("en");
+            changeLanguage(choice);
             break;
     }
 
-    $(".to-en").click(function () {changeLanguage("en");});
-    $(".to-it").click(function () {changeLanguage("it");});
+    $("#header").load("../header.html", function() {
+
+        $(".to-en").click(function () {changeLanguage("en"); choice="en"});
+        $(".to-it").click(function () {changeLanguage("it"); choice="it"});
+
+        changeLanguage(choice);
+    });
+    $("#footer").load("../footer.html", function() {
+        changeLanguage(choice);
+    });
 
     // SCROLLING MENU
     $(window).scroll(function() {

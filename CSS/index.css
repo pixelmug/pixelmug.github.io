@@ -67,14 +67,12 @@
 }
 
 #content-text-div {
-    left: 50vw;
-    top: 37.5vh;
+    left: 10vw;
+    top: 40vh;
     z-index: 255;
     position: absolute;
-    transform: translateX(-50%);
 
     text-wrap: normal;
-    text-align: center;
 }
 
 #content-text-div h1 {
@@ -82,20 +80,24 @@
     white-space: nowrap;
     padding: 0 2.5vw 0 1.5vw;
 
-    font-size: 100px;
+    text-align: right;
+    font-size: 7.5vw;
     font-weight: bold;
     color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.8);
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 0 5px #000000, 0 0 5px #3c3c3c;
 }
 
 #content-text-div h2 {
-    margin-top: -2vh;
-    padding: 0 2.5vw 1vh 2vw;
+    display:inline-block;
+    margin-top: 1vh;
+    padding: 1vh 2vw 1vh 2vw;
 
     font-size: 50px;
     font-weight: bold;
     color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.8);
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 0 4px #000000, 0 0 4px #5c5c5c;
 }

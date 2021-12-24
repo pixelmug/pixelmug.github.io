@@ -1,16 +1,4 @@
-function changeLanguage(lang) {
-    if (lang === "it") {
-        $(".en").hide();
-        $(".it").show();
-        $("#it-div").show()
-        $("#en-div").hide()
-    } else {
-        $(".it").hide();
-        $(".en").show();
-        $("#en-div").show();
-        $("#it-div").hide();
-    }
-}
+
 
 $(document).ready(function() {
 
@@ -35,12 +23,12 @@ $(document).ready(function() {
     let team_members = [
         ["Luca", ["Team Leader", "Team Leader"], "Images/placeholder.jpg", ["#resp-team"]],
         ["Pasquale", ["Lead Designer", "Responsabile Design"], "Images/placeholder.jpg", ["#resp-team"]],
-        ["Juan", ["Lead 3D Artist", "Responsabile Artistico"], "Images/placeholder.jpg", ["#resp-team", "#a-team"]],
-        ["Matteo", ["Lead 3D Artist", "Responsabile Artistico"], "Images/placeholder.jpg", ["#resp-team", "#a-team"]],
+        ["Matteo", ["Lead 2D Artist", "Responsabile Artistico"], "Images/placeholder.jpg", ["#resp-team", "#a-team"]],
         ["Amerigo", ["Lead Programmer", "Responsabile Programmazione"], "Images/placeholder.jpg", ["#resp-team", "#p-team"]],
         ["Matteo", ["Lead Programmer", "Responsabile Programmazione"], "Images/placeholder.jpg", ["#resp-team", "#p-team"]],
         ["Marco", ["Lead Sound & Music Designer", "Responsabile Suono & Musica"], "Images/placeholder.jpg", ["#resp-team", "#s-team"]],
         ["Riccardo", ["Team Member", "Team Member"], "Images/placeholder.jpg", ["#a-team"]],
+        ["Juan", ["Team Member", "Team Member"], "Images/placeholder.jpg", ["#a-team"]],
         ["Sara", ["Team Member", "Team Member"], "Images/placeholder.jpg", ["#a-team"]],
         ["Simone", ["Team Member", "Team Member"], "Images/placeholder.jpg", ["#a-team"]],
         ["Samuele", ["Team Member", "Team Member"], "Images/placeholder.jpg", ["#s-team"]],

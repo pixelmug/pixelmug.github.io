@@ -39,15 +39,31 @@
 }
 
 #mission-text h4 {
+
+    max-height: 35vh;
     max-width: 100%;
-    margin: 0 0 5vh 0;
-    padding: 0 8.5vw;
+    margin: 0 8.5vw 5vh 8.5vw;
+    padding: 0 2vw 0 0;
 
     font-size: 20px;
     font-weight: bold;
+    overflow-y: scroll;
     color: var(--primary);
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--secondary);
+}
+
+/* Width */
+#mission-text h4::-webkit-scrollbar {
+    width: 7px;
+    background: var(--secondary);
+}
+
+/* Handle */
+#mission-text h4::-webkit-scrollbar-thumb {
+    background: #dfe0e2;
 }
 
 #mission-img {
@@ -88,23 +104,24 @@
     font-weight: bold;
     color: var(--primary);
     font-family: 'Montserrat', sans-serif;
-    text-shadow: 0 0 0 #000000, 0 0 3px #3c3c3c;
+    text-shadow: 0 0 10px #000000, 0 0 10px #3c3c3c;
 }
 
 #story-text p {
     width: 50%;
     margin-top: -2vh;
-    padding: 2.5vh 25vw 1vh 25vw;
+    padding: 2.5vh 25% 0 25%;
 
     font-size: 30px;
     font-weight: bold;
     color: var(--primary);
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    text-shadow: 0 0 2px #000000, 0 0 2px #5c5c5c;
+    text-shadow: 0 0 7px #000000, 0 0 7px #333;
 }
 
 #expand-team {
+    margin-top: -4vh;
     color: white;
     font-size: 80px;
 }
@@ -140,7 +157,6 @@
     box-sizing: border-box;
     background-color: var(--secondary);
     border-top: 2px solid var(--primary);
-    border-bottom: 2px solid var(--primary);
 }
 
 #team-menu {
