@@ -20,7 +20,7 @@
 .gallery-image {
     width: 100%;
     height: 100vh;
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
 #dot-div {
@@ -68,7 +68,7 @@
 
 #content-text-div {
     left: 10vw;
-    top: 40vh;
+    top: 35vh;
     z-index: 255;
     position: absolute;
 
@@ -84,7 +84,7 @@
     font-size: 7.5vw;
     font-weight: bold;
     color: var(--primary);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 0 5px #000000, 0 0 5px #3c3c3c;
 }
@@ -97,7 +97,7 @@
     font-size: 50px;
     font-weight: bold;
     color: var(--primary);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 0 4px #000000, 0 0 4px #5c5c5c;
 }
