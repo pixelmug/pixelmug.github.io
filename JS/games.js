@@ -77,7 +77,7 @@ $(document).ready(function() {
     // Gallery management
     let galleries = [
         ["img4.png", "img6.png", "img3.jpg", "img7.jpg"],
-        ["test3.jpg", "test4.jpg", "test4.jpg"],
+        ["EIF/task1.png", "EIF/task2.png", "EIF/task3.png"],
         ["test3.jpg", "test4.jpg", "test4.jpg", "test3.jpg", "test4.jpg", "test4.jpg"]
     ];
 

@@ -60,20 +60,24 @@ body  {
 #game-1 {
     box-sizing: border-box;
     border-right: 5px solid black;
-    background-image: url("../Images/test2.jpg");
+    background-image: url("../Images/Projects/game1.jpg");
 }
 
 #game-2 {
     box-sizing: border-box;
     border-left: 5px solid black;
     border-right: 5px solid black;
-    background-image: url("../Images/Projects/img8.jpg");
+    background-image: url("../Images/Projects/game2.png");
 }
 
 #game-3 {
     box-sizing: border-box;
     border-left: 5px solid black;
     background-image: url("../Images/test5.jpeg");
+}
+
+.link_to_game {
+    color: var(--primary);
 }
 
 .game-preview {
